@@ -10,7 +10,7 @@ using namespace std;
 // SOBRECARGA DO OPERADOR (>>)
 istream& operator>>(istream& in, Data& d){
 	while(true){	
-    	// repete a leitura do dia enquanto o valor lido for menor que 1 ou maior que 31 
+    		// repete a leitura do dia enquanto o valor lido for menor que 1 ou maior que 31 
 		do{
 			cout << "Dia: ";
 			in >> d.dd;
@@ -22,7 +22,7 @@ istream& operator>>(istream& in, Data& d){
 			in >> d.mm;
 		}while(d.mm < 1 || d.mm > 12);
     
-    	// repete a leitura do ano enquanto o valor lido for menor que 0
+    		// repete a leitura do ano enquanto o valor lido for menor que 0
 		do{
 			cout << "Ano: ";
 			in >> d.yy;
@@ -93,23 +93,23 @@ ostream& operator<<(ostream& out, const Data& d){
 
 // INCREMENTA DATA EM 1 DIA
 void Data::incrementa(void){
-	dd++;	                       // incrementa o dia
-	if(dd == 29 && mm == 2){       // se a data é (29 de fevereiro)
-		dd = 1;                    // reseta dia para 1
-		mm++;                      // incrementa o mês
-	} else if((mm<=7 && mm%2==1) || (mm>=8 && mm%2==0)){   // meses ímpares do primeiro semestre
-		if(dd == 32){                                      // e pares do segundo semestre (meses que vão até dia 31)
-			dd = 1;             // reseta dia para 1
-			mm++;               // incrementa o mês
-			if(mm == 13){       // se mês = 13
-				mm = 1;         // reseta mês para 1
-				yy++;           // incrementa o ano
+	dd++;	                      	 // incrementa o dia
+	if(dd == 29 && mm == 2){     	 // se a data é (29 de fevereiro)
+		dd = 1;                  // reseta dia para 1
+		mm++;                    // incrementa o mês
+	} else if((mm<=7 && mm%2==1) || (mm>=8 && mm%2==0)){  	 // meses ímpares do primeiro semestre
+		if(dd == 32){                                    // e pares do segundo semestre (meses que vão até dia 31)
+			dd = 1;            	 // reseta dia para 1
+			mm++;             	 // incrementa o mês
+			if(mm == 13){      	 // se mês = 13
+				mm = 1;          // reseta mês para 1
+				yy++;            // incrementa o ano
 			}
 		}
-	} else{                // meses pares do primeiro semestre
-		if(dd == 31){      // e ímpares do segundo semestre (meses que vão até dia 30)
-			dd = 1;        // reseta dia para 1
-			mm++;          // incrementa o mês
+	} else{                		// meses pares do primeiro semestre
+		if(dd == 31){      	// e ímpares do segundo semestre (meses que vão até dia 30)
+			dd = 1;         // reseta dia para 1
+			mm++;           // incrementa o mês
 		}
 	}
 }
