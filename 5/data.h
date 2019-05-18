@@ -12,7 +12,7 @@ class Data{
 
 	private:
 		int dd;   // dia
-		int	mm;   // mês
+		int mm;   // mês
 		int yy;   // ano
 		
 		void incrementa(void);
