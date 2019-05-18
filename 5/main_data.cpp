@@ -1,5 +1,5 @@
 // André Nascimento
-// GitHub: https://github.com/DrumNasci
+// GitHub: https://github.com/AndreNasci
 // Linkedin: linkedin.com/in/andré-nascimento-a01095185
 
 #include <bits/stdc++.h>
