@@ -1,1 +1,1 @@
-# C Orientada ao Objeto (C++)
+# C - Orientação ao Objeto (C++)
